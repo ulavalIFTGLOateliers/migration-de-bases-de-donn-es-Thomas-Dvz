@@ -2,6 +2,7 @@ ALTER TABLE singer RENAME TO musician ;
 ALTER TABLE musician CHANGE COLUMN singerName musicianName VARCHAR(50);
 ALTER TABLE musician ADD COLUMN role VARCHAR(50);
 ALTER TABLE musician ADD COLUMN bandName VARCHAR(50);
+
 UPDATE musician
 SET role = CASE
     WHEN musicianName = 'Alina' THEN 'vocals'
